@@ -1,14 +1,4 @@
-function rps(a){
-    let rnd = Math.random()
-    if (rnd>0.6){
-        b = "rock";
-    }
-    else if (rnd>0.3){
-        b = "scissors";
-    }
-    else{
-        b = "paper";
-    }
+function playRound(a,b){
     if(a==b){
         console.log(`The computer also chose ${a}. It'd a draw!`);
         return
@@ -42,6 +32,24 @@ function rps(a){
             console.log("Invalid input");
     }
 }
+function getComputerChoice(){
+    let rnd = Math.random()
+    if (rnd>0.6){
+        return "rock";
+    }
+    else if (rnd>0.3){
+        return "scissors";
+    }
+    else{
+        return "paper";
+    }
+}
 
-let choice = prompt("Choose rock, paper or scissors!");
-rps(choice);
+function getHumanChoice(){
+    let usr_choice = prompt("Choose rock, paper or scissors!");
+    usr_choice = usr_choice.toLowerCase()
+    comp_choice = getComputerChoice()
+    playRound(usr_choice, comp_choice);
+}   
+
+
