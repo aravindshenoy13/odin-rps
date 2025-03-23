@@ -1,1 +1,1 @@
-Rock paper scissors in the console using js.
+Rock paper scissors with UI using js.
